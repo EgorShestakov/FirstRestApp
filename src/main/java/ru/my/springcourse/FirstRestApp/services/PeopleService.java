@@ -25,4 +25,9 @@ public class PeopleService {
     public Person findById(Integer id) {
         return peopleRepository.findById(id).orElseThrow(PersonNotFoundException::new);
     }
+
+    @Transactional
+    public void save(Person person) {
+        peopleRepository.save(person);
+    }
 }
