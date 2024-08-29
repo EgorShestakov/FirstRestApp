@@ -10,3 +10,6 @@ INSERT INTO Person(name, age, email) VALUES('Alex', 30, 'alex@mail.ru');
 INSERT INTO Person(name, age, email) VALUES('Bob', 27, 'bob@mail.ru');
 
 SELECT * FROM Person;
+TRUNCATE Person;
+
+ALTER TABLE Person ADD COLUMN created_at timestamp, ADD COLUMN updated_at timestamp, ADD COLUMN created_who varchar;
